@@ -14,6 +14,8 @@ public class HelloController {
     public String postTest3(User user)
     {
         System.out.println(user.getUserage());
+        System.out.println(user.getUsername());
+        System.out.println(user);
         return "user";
     }
 }
