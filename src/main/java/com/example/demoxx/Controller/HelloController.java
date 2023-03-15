@@ -11,7 +11,7 @@ public class HelloController {
     }
 
     @RequestMapping(value = "Post3",method = RequestMethod.POST)
-    public String postTest3(User user)
+    public String postTest3(@RequestBody User user)
     {
         System.out.println(user.getUserage());
         System.out.println(user.getUsername());
