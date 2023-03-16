@@ -1,22 +1,23 @@
 package com.example.demoxx.entity;
 
 public class User {
-    private String username;
-    private String userage;
+    public String ID;
+    public String name;
 
-    public String getUserage() {
-        return userage;
+    public String getID() {
+        return ID;
     }
 
-    public void setUserage(String userage) {
-        this.userage = userage;
+    public void setID(String ID) {
+        this.ID = ID;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setName(String name) {
+        this.name = name;
     }
+
 }

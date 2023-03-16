@@ -13,8 +13,8 @@ public class HelloController {
     @RequestMapping(value = "Post3",method = RequestMethod.POST)
     public String postTest3(@RequestBody User user)
     {
-        System.out.println(user.getUserage());
-        System.out.println(user.getUsername());
+        System.out.println(user.getID());
+        System.out.println(user.getName());
         System.out.println(user);
         return "user";
     }
