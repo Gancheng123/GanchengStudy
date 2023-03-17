@@ -7,9 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @MapperScan(basePackages = "com.example.demoxx.mapper")
 public class DemoxxApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(DemoxxApplication.class, args);
     }
-
 }

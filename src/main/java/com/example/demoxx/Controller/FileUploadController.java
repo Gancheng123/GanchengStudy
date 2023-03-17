@@ -13,8 +13,7 @@ import java.io.IOException;
 @RestController
 public class FileUploadController {
     @PostMapping("/upload")
-    public String up(String nickname, MultipartFile photo, HttpServletRequest request) throws IOException
-    {
+    public String up(String nickname, MultipartFile photo, HttpServletRequest request) throws IOException {
         System.out.println(nickname);
         //获取图片的原始名称
         System.out.println(photo.getOriginalFilename());
@@ -23,16 +22,17 @@ public class FileUploadController {
         //获取服务器目标路径
         String path = request.getServletContext().getRealPath("/upload/");
         System.out.println(path);
-        saveFile(photo,path);
+        saveFile(photo, path);
         return "上传成功";
     }
-    public void saveFile(MultipartFile photo,String path) throws IOException{
+
+    public void saveFile(MultipartFile photo, String path) throws IOException {
         //判断存储的目录是否存在，如果不存在则创建
         File dir = new File(path);
-        if(!dir.exists()){
+        if (!dir.exists()) {
             dir.mkdir();
         }
-        File file = new File(path+photo.getOriginalFilename());
+        File file = new File(path + photo.getOriginalFilename());
         photo.transferTo(file);
     }
 }

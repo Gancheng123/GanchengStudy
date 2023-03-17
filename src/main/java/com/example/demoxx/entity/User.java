@@ -1,23 +1,71 @@
 package com.example.demoxx.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
+
+import java.util.Date;
+import java.util.List;
+
+@TableName("User")
 public class User {
-    public String ID;
-    public String name;
+    public int id;
+    public String username;
+    public String password;
+    public String userage;
+    public Date birth;
 
-    public String getID() {
-        return ID;
+    //    @TableField(exist = false)
+    public List<Order> orders;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", userage='" + userage + '\'' +
+                ", birth=" + birth +
+                ", orders=" + orders +
+                '}';
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
+    public int getId() {
+        return id;
     }
 
-    public String getName() {
-        return name;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getUsername() {
+        return username;
     }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUserage() {
+        return userage;
+    }
+
+    public void setUserage(String userage) {
+        this.userage = userage;
+    }
+
+    public Date getBirth() {
+        return birth;
+    }
+
+    public void setBirth(Date birth) {
+        this.birth = birth;
+    }
 }
